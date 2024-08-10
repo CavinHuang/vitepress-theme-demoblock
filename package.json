@@ -5,7 +5,7 @@
   "description": "vitepress-theme-demoblock",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xinlei3166/vitepress-theme-demoblock"
+    "url": "https://github.com/CavinHuang/vitepress-theme-demoblock"
   },
   "keywords": [
     "vitepress",
@@ -13,12 +13,7 @@
     "theme",
     "demoblock"
   ],
-  "bugs": {
-    "url": "https://github.com/xinlei3166/vitepress-theme-demoblock/issues"
-  },
-  "homepage": "https://github.com/xinlei3166/vitepress-theme-demoblock#readme",
-  "author": "君惜",
-  "license": "MIT",
+
   "bin": {
     "vitepress-register-components": "bin/vitepress-register-components.js",
     "vitepress-rc": "bin/vitepress-register-components.js"
@@ -41,7 +36,7 @@
     "preinstall": "npx only-allow pnpm",
     "prepare": "simple-git-hooks",
     "test": "vitest",
-    "watch-build": "chokidar 'src/**/*.ts' 'src/**/*.vue' -c 'pnpm run build'",
+    "watch-build": "chokidar \"src/**/*.ts\" \"src/**/*.vue\" -c \"pnpm run build\"",
     "build": "unbuild",
     "stub": "unbuild --stub",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx,.vue",

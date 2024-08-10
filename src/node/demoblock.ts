@@ -15,7 +15,7 @@ export const blockPlugin = (md: MarkdownIt, options: DemoblockPluginOptions) => 
       const m = tokens[idx].info.trim().match(/^demo\s*(.*)$/)
       if (tokens[idx].nesting === 1) {
         const componentName = m && m.length > 1 ? m[1] : ''
-        console.log('🚀 ~ render ~ componentName:', componentName)
+        console.log('🚀 ~ render 1111~ componentName:', componentName)
         const content = tokens[idx + 1].type === 'fence' ? tokens[idx + 1].content : ''
         const contents = content.replace('<client-only>', '').replace('</client-only>', '')
         // return `<demo customClass="${options?.customClass || ''}" sourceCode="${md.utils.escapeHtml(

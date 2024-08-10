@@ -64,8 +64,9 @@ export async function transformCodeToComponent(
         .map(block => {
           const filename = combineVirtualFilename(id, block.name, block.lang)
           const blockId = ('/' + path.relative(options.root, filename))
-            .replace(/\//g, '_')
+            .replace(/\/|\\/g, '_')
             .replace(/\./g, '-')
+          console.log('===========', blockId)
           return `import RenderDemoI${block.name} from '${filename}';
 import fileIdV${block.name} from 'virtual:id:${blockId}'`
         })

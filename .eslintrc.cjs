@@ -45,6 +45,6 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/consistent-type-imports': 1,
     //vue
-    'vue/multi-word-component-names': 1
+    'vue/multi-word-component-names': 'off'
   }
 }

@@ -1,0 +1,87 @@
+<template>
+  <div class="flex h-100">
+    <i-scrollbar content-class="flex-column">
+      <div v-for="v in virtualList" :key="v" class="mt-3 mb-3">
+        <i-material
+          :src="v"
+          height="100px"
+          fail-src="https://picsum.photos/100/100"
+          placeholder="https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/64780a79e4b0b55e7819ec0e.jpeg?x-oss-process=style%2Fyaoduo3"
+        />
+      </div>
+    </i-scrollbar>
+  </div>
+</template>
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const virtualList = ref<any[]>([
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/648c0854e4b03fcd3c9c3476.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/648c0859e4b03fcd3c9c3478.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/648c085ee4b03fcd3c9c347a.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/65fc0ad4e4b0b5d07184af0c.jpg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/65fc0ad4e4b0b5d07184af0d.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/65fc0b8de4b0b5d07184af13.jpg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/65fc0b8de4b0b5d07184af11.jpg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/65fc0b8de4b0b5d07184af12.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/6481acefe4b0123c935d9d6d.jpg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/646db9ade4b0b55e7819d95f.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/646db979e4b0b55e7819d95c.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/64780a79e4b0b55e7819ec0e.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/64780a7de4b0b55e7819ec10.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/64780a83e4b0b55e7819ec12.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/64474cf2e4b020a05e25e206.jpg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/6447486de4b020a05e25e1fa.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/6447467ee4b020a05e25e1ee.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/64474689e4b020a05e25e1f0.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/6447468fe4b020a05e25e1f2.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/task3/634e8906e4b0298f11fc8923.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/637dde46e4b00ca1a139e4ce.jpg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/637dde46e4b00ca1a139e4ce.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/637dde46e4b00ca1a139e4ce.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/637dde46e4b00ca1a139e4ce.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/637dde46e4b00ca1a139e4ce.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/637dde46e4b00ca1a139e4ce.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/637dde46e4b00ca1a139e4ce.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e36b77e4b0c6b50ee9cf72.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e37c74e4b0c6b50ee9cff4.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e37cb3e4b0c6b50ee9cff8.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e37cd8e4b0c6b50ee9cffc.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e3804ee4b0c6b50ee9d00a.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e45ccee4b0c6b50ee9d078.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e45cdde4b0c6b50ee9d07c.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e45ce3e4b0c6b50ee9d07f.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e45cebe4b0c6b50ee9d081.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e45cfee4b0c6b50ee9d083.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e45e99e4b0c6b50ee9d094.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e45ea6e4b0c6b50ee9d096.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e45eb8e4b0c6b50ee9d098.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e45ec5e4b0c6b50ee9d09a.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e465c6e4b0c6b50ee9d0c2.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e465cbe4b0c6b50ee9d0c6.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e465cfe4b0c6b50ee9d0c8.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e465d4e4b0c6b50ee9d0ca.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e465ede4b0c6b50ee9d0d3.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e465f3e4b0c6b50ee9d0d5.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e465fee4b0c6b50ee9d0d7.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e46603e4b0c6b50ee9d0db.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e46610e4b0c6b50ee9d0dd.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e46639e4b0c6b50ee9d0df.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e46643e4b0c6b50ee9d0e1.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e4664ce4b0c6b50ee9d0e3.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e46658e4b0c6b50ee9d0e5.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e4665de4b0c6b50ee9d0e7.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e46665e4b0c6b50ee9d0e9.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e4666be4b0c6b50ee9d0eb.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63e46674e4b0c6b50ee9d0ed.gif',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63a02ab3e4b0afae6c1956fe.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63a02ab6e4b0afae6c195700.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63a02abce4b0afae6c195702.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63a02ac8e4b0afae6c195705.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63a02ad2e4b0afae6c195709.jpeg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63a02ae3e4b0afae6c19570b.jpg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63a02aebe4b0afae6c19570d.jpg',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63a02af7e4b0afae6c19570f.png',
+  'https://icc-dev.oss-cn-shenzhen.aliyuncs.com/ww561ce81776c525cd/media/63da1009e4b0c6b50ee9c3fb.gif'
+])
+</script>
